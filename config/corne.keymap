@@ -70,7 +70,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        lower_layer {
+        default_layer {
             bindings = <
                 &td0
             >;
@@ -91,7 +91,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        lower_layer {
+        default_layer {
             bindings = <
                 &td1
             >;
@@ -112,7 +112,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        lower_layer {
+        default_layer {
             bindings = <
                 &td2
             >;
@@ -133,7 +133,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        lower_layer {
+        default_layer {
             bindings = <
                 &td3
             >;
@@ -154,7 +154,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        lower_layer {
+        default_layer {
             bindings = <
                 &td4
             >;
@@ -175,7 +175,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        lower_layer {
+        default_layer {
             bindings = <
                 &td5
             >;
@@ -196,7 +196,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        lower_layer {
+        default_layer {
             bindings = <
                 &td6
             >;
@@ -217,7 +217,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        lower_layer {
+        default_layer {
             bindings = <
                 &td7
             >;

@@ -8,7 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -22,8 +21,8 @@
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp LSHFT   &kp SPACE &kp SPACE &kp RET
+   &kp Z &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+                  &kp LGUI &mo 1 &kp LSHFT  &kp SPACE &kp SPACE &kp RET
                         >;
                 };
                 lower_layer {
@@ -33,10 +32,10 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp ESC    &td0       &td1       &td2       &td3       &td4         &td5   &td6   &td7 &kp N9    &kp N0 &kp EQUAL
-   &none &none &kp LEFT &kp UP &kp RIGHT &none   &none &kp LPAR &kp RPAR &kp RIGHT &none &none
+   &kp ESC    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp EQUAL
+   &none &none &kp LEFT &kp UP &kp RIGHT &none   &mo 2 &kp LPAR &kp RPAR &kp RIGHT &none &none
    &kp LSHFT  &kp LSHFT       &none       &kp DOWN       &none       &none         &kp LBKT   &kp RBKT   &kp LBRC &kp RBRC    &kp BSLH &none
-                                    &kp LGUI     &none       &kp SPACE      &mo 2  &kp BSPC   &kp RET
+                                    &kp LGUI     &none       &kp SPACE      &kp LSHFT  &kp BSPC   &kp RET
                         >;
                 };
 
@@ -54,173 +53,4 @@
                         >;
                 };
         };
-};
-
-/ {
-    behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp N1>, <&kp EXCL>;
-        };
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-                &td0
-            >;
-        };
-    };
-};
-/ {
-    behaviors {
-        td1: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp N1>, <&kp AT>;
-        };
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-                &td1
-            >;
-        };
-    };
-};
-/ {
-    behaviors {
-        td2: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp N1>, <&kp HASH>;
-        };
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-                &td2
-            >;
-        };
-    };
-};
-/ {
-    behaviors {
-        td3: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp N1>, <&kp DLLR>;
-        };
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-                &td3
-            >;
-        };
-    };
-};
-/ {
-    behaviors {
-        td4: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp N1>, <&kp PRCNT>;
-        };
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-                &td4
-            >;
-        };
-    };
-};
-/ {
-    behaviors {
-        td5: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp N1>, <&kp CARET>;
-        };
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-                &td5
-            >;
-        };
-    };
-};
-/ {
-    behaviors {
-        td6: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp N1>, <&kp AMPS>;
-        };
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-                &td6
-            >;
-        };
-    };
-};
-/ {
-    behaviors {
-        td7: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp N1>, <&kp STAR>;
-        };
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-                &td7
-            >;
-        };
-    };
 };

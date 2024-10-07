@@ -1,51 +1,39 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
+            behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp K>, <&kp LG(S)>;
+        };
+    };
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
-   &kp LALT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LALT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &td0     &kp L   &kp SEMI &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp LSHFT  &kp LSHFT &kp SPACE &kp RET
+                  &kp LGUI &mo 1 &mo 1  &kp LSHFT &kp SPACE &kp RET
                         >;
                 };
                 lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp EQUAL
    &none &none &kp LEFT &kp UP &kp RIGHT &none             &mo 2 &kp LPAR &kp RPAR &none &kp COLON &none
-   &kp LSHFT  &kp LSHFT  &none  &kp DOWN  &none  &none    &kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &none  &none
+   &kp LSHFT  &kp LSHFT  &none  &kp DOWN  &kp LG(C)  &kp LG(V)   &kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &none  &none
                            &kp LGUI  &none  &kp SPACE      &kp LSHFT  &kp BSPC   &kp RET
                         >;
                 };
 
                 raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp  TAB  &kp EXCL &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &kp PRCNT   &kp CARET &ext_power EP_TOG &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &none   &none &none   &none   &none      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE

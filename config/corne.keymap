@@ -115,7 +115,7 @@
 
                         bindings = <
    &kp TAB   &td0 &td1 &td2 &td3 &td4   &td5 &td6  &td7     &td8   &td9    &kp MINUS
-   &kp LALT &kp A &td13 &td15 &kp td14 &td12   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LALT &kp A &td13 &td15 &td14 &td12   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LCTRL &kp Z &kp X &td16 &td10 &td11  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
                   &kp LGUI &tog 1 &sk LSHIFT  &kp LSHFT &kp SPACE &kp RET
                         >;

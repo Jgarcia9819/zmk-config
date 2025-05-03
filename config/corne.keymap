@@ -11,77 +11,101 @@
             tapping-term-ms = <175>;
             bindings = <&kp Q>, <&kp N1>;
         };
-        td0: tap_dance_1 {
+        td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
             bindings = <&kp W>, <&kp N2>;
         };
-        td0: tap_dance_2 {
+        td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
             bindings = <&kp E>, <&kp N3>;
         };
-        td0: tap_dance_3 {
+        td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
             bindings = <&kp R>, <&kp N4>;
         };
-        td0: tap_dance_4 {
+        td4: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
             bindings = <&kp T>, <&kp N5>;
         };
-        td0: tap_dance_5 {
+        td5: tap_dance_5 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
             bindings = <&kp Y>, <&kp N6>;
         };
-        td0: tap_dance_6 {
+        td6: tap_dance_6 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
             bindings = <&kp U>, <&kp N7>;
         };
-        td0: tap_dance_7 {
+        td7: tap_dance_7 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
             bindings = <&kp I>, <&kp N8>;
         };
-        td0: tap_dance_8 {
+        td8: tap_dance_8 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
             bindings = <&kp O>, <&kp N9>;
         };
-        td0: tap_dance_9 {
+        td9: tap_dance_9 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
             bindings = <&kp P>, <&kp N0>;
         };
-        td0: tap_dance_10 {
+        td10: tap_dance_10 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
-            bindings = <&kp P>, <&kp N0>;
+            bindings = <&kp V>, <&kp LG(C)>;
         };
-        td0: tap_dance_11 {
+        td11: tap_dance_11 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
-            bindings = <&kp P>, <&kp N0>;
+            bindings = <&kp B>, <&kp LG(V)>;
         };
-        td0: tap_dance_12 {
+        td12: tap_dance_12 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
-            bindings = <&kp P>, <&kp N0>;
+            bindings = <&kp G>, <&kp LG(S)>;
+        };
+        td13: tap_dance_13 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&kp S>, <&kp LEFT>;
+        };
+        td14: tap_dance_14 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&kp F>, <&kp RIGHT>;
+        };
+        td15: tap_dance_15 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&kp D>, <&kp UP>;
+        };
+        td16: tap_dance_16 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&kp C>, <&kp DOWN>;
         };
     };
         keymap {
@@ -91,9 +115,9 @@
 
                         bindings = <
    &kp TAB   &td0 &td1 &td2 &td3 &td4   &td5 &td6  &td7     &td8   &td9    &kp MINUS
-   &kp LALT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &td0     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &mo 1  &kp LSHFT &kp SPACE &kp RET
+   &kp LALT &kp A &td13 &td15 &kp td14 &td12   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LCTRL &kp Z &kp X &td16 &td10 &td11  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+                  &kp LGUI &tog 1 &sk LSHIFT  &kp LSHFT &kp SPACE &kp RET
                         >;
                 };
                 lower_layer {
@@ -101,7 +125,7 @@
    &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp EQUAL
    &none &none &kp LEFT &kp UP &kp RIGHT &none             &mo 2 &kp LPAR &kp RPAR &none &kp COLON &none
    &kp LSHFT  &kp LSHFT  &none  &kp DOWN  &kp LG(C)  &kp LG(V)   &kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &none  &none
-                           &kp LGUI  &none  &kp SPACE      &kp LSHFT  &kp BSPC   &kp RET
+                           &kp LGUI  &tog 1  &kp SPACE      &kp LSHFT  &kp BSPC   &kp RET
                         >;
                 };
 

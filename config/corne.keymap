@@ -107,6 +107,48 @@
             tapping-term-ms = <175>;
             bindings = <&kp C>, <&kp DOWN>;
         };
+        td17: tap_dance_17 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&kp J>, <&kp LPAR>;
+        };
+        td18: tap_dance_18 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&kp K>, <&kp RPAR>;
+        };
+        td19: tap_dance_19 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&kp L>, <&kp LBKT>;
+        };
+        td20: tap_dance_20 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&kp SEMI>, <&kp RBKT>;
+        };
+        td21: tap_dance_21 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&kp M>, <&kp LBRC>;
+        };
+        td22: tap_dance_22 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&kp COMMA>, <&kp RBRC>;
+        };
+        td23: tap_dance_23 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&kp H>, <&kp MINUS>;
+        };
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -114,10 +156,10 @@
                 default_layer {
 
                         bindings = <
-   &kp TAB   &td0 &td1 &td2 &td3 &td4   &td5 &td6  &td7     &td8   &td9    &kp MINUS
-   &kp LALT &kp A &td13 &td15 &td14 &td12   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL &kp Z &kp X &td16 &td10 &td11  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &tog 1 &sk LSHIFT  &kp LSHFT &kp SPACE &kp RET
+   &kp TAB   &td0 &td1 &td2 &td3 &td4   &td5 &td6  &td7     &td8   &td9    &kp BSPC
+   &kp LALT &kp A &td13 &td15 &td14 &td12   &td23 &td17  &td18     &td19   &td20 &kp SQT
+   &kp LCTRL &kp Z &kp X &td16 &td10 &td11  &kp N &td21  &td22 &kp DOT &kp FSLH &kp ESC
+                   &kp LGUI &tog 1 &sk LSHIFT  &kp LSHFT &kp SPACE &kp RET
                         >;
                 };
                 lower_layer {

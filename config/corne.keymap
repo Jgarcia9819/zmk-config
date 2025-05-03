@@ -157,7 +157,7 @@
 
                         bindings = <
    &kp TAB   &td0 &td1 &td2 &td3 &td4   &td5 &td6  &td7     &td8   &td9    &kp BSPC
-   &kp LALT &kp A &td13 &td15 &td14 &td12   &td23 &td17  &td18     &kp L   &kp COLON &kp SQT
+   &kp LALT &kp A &td13 &td15 &td14 &td12   &td23 &td17  &td18     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &td16 &td10 &td11  &td19 &td20  &td21 &td22 &kp FSLH &kp ESC
                    &kp LGUI &tog 1 &sk LSHIFT  &kp LSHFT &kp SPACE &kp RET
                         >;

@@ -149,6 +149,12 @@
             tapping-term-ms = <175>;
             bindings = <&kp H>, <&kp MINUS>;
         };
+        td24: tap_dance_24 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&kp L>, <&kp PLUS>;
+        };
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -157,9 +163,9 @@
 
                         bindings = <
    &kp TAB   &td0 &td1 &td2 &td3 &td4   &td5 &td6  &td7     &td8   &td9    &kp BSPC
-   &kp LCTRL &kp A &td13 &td15 &td14 &td12   &td23 &td17  &td18     &kp L   &kp SEMI &kp SQT
+   &kp LCTRL &kp A &td13 &td15 &td14 &td12   &td23 &td17  &td18     &td24 &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &td16 &td10 &td11  &td19 &td20  &td21 &td22 &kp FSLH &kp ESC
-                   &kp LGUI &tog 1 &sk LSHIFT  &kp LGUI &kp SPACE &kp RET
+                   &kp LGUI &tog 1 &sk LSHIFT  &sk LGUI &kp SPACE &kp RET
                         >;
                 };
                 lower_layer {
@@ -167,7 +173,7 @@
    &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp EQUAL
    &none &none &kp LEFT &kp UP &kp RIGHT &none             &mo 2 &kp LPAR &kp RPAR &none &kp COLON &none
    &kp LSHFT  &kp LSHFT  &none  &kp DOWN  &kp LG(C)  &kp LG(V)   &kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &none  &none
-                           &kp LGUI  &tog 1  &sk LSHFT      &kp LSHFT  &kp BSPC   &kp RET
+                           &kp LGUI  &tog 1  &sk LSHFT      &kp BSPC  &kp SPACE   &kp RET
                         >;
                 };
 
